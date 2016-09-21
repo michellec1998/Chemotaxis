@@ -1,15 +1,23 @@
  //declare bacteria variables here 
  Bacteria sheldon;
+ Bacteria[] colony;
 
  void setup()   
  {     
  	//initialize bacteria variables here
  	size (500, 500);   
+ 	colony = new Bacteria[5];
  }   
  void draw()   
  {    
  	background(255);
- 	sheldon = new Bacteria();
+ 	for (int i = 0; i < colony.length; i++ )
+ 	{
+ 	 	colony[i].walk;
+ 	 	colony[i].show;
+ 	 	sheldon = new Bacteria(200,200);
+ 	}
+ 	//sheldon = new Bacteria();
  	sheldon.walk();
  	sheldon.show();
  	
@@ -26,8 +34,8 @@
  	}
  	void walk()
  	{
- 		myX = myX + (int)(Math.random()*20)-1;
- 		myY = myY + (int)(Math.random()*20)-1;
+ 		myX = myX + (int)(Math.random()*500)-1;
+ 		myY = myY + (int)(Math.random()*500)-1;
  	}
  	void show()
  	{

@@ -1,23 +1,24 @@
  //declare bacteria variables here 
- Bacteria sheldon;
- Bacteria[] colony;
+ Bacteria sheldon = new Bacteria();
+ Bacteria[] colony = new Bacteria[1];
+ //Bacteria patrick = new Bacteria();
 
  void setup()   
  {     
  	//initialize bacteria variables here
  	size (500, 500);   
- 	colony = new Bacteria[5];
+ 	
  }   
  void draw()   
  {    
  	background(255);
- 	for (int i = 0; i < colony.length; i++ )
+ 	for (int i = 0; i < colony.length; i++)
  	{
- 	 	colony[i].walk;
- 	 	colony[i].show;
- 	 	sheldon = new Bacteria(200,200);
+ 	 	colony[i] = new Bacteria();
+ 	 	colony[i].walk();
+ 	 	colony[i].show();
  	}
- 	//sheldon = new Bacteria();
+ 	
  	sheldon.walk();
  	sheldon.show();
  	
@@ -26,21 +27,23 @@
  class Bacteria    
  {     
  	int myX, myY;
- 	Bacteria(int x, int y)
+ 	Bacteria()
  	{
- 		myX = x;
- 		myY = y;
+ 		myX = 250;
+ 		myY = 250;
 
  	}
  	void walk()
  	{
- 		myX = myX + (int)(Math.random()*500)-1;
- 		myY = myY + (int)(Math.random()*500)-1;
+ 		myX = myX + (int)(Math.random()*5)-2;
+ 		myY = myY + (int)(Math.random()*5)-2;
  	}
  	void show()
  	{
- 		fill(0);
- 		ellipse(myX, myY, 10,10);
+ 		stroke(0);
+ 		strokeWeight(10);
+ 		point(myX, myY);
+ 		//ellipse(myX, myY, 10,10);
  	}
  	
  	//lots of java!   

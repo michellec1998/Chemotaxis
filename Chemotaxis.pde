@@ -1,7 +1,7 @@
  //declare bacteria variables here
  //int a = 0;
  Bacteria sheldon = new Bacteria();
-Bacteria[] colony = new Bacteria[50];
+Bacteria[] colony = new Bacteria[100];
 //Bacteria[] anoth = new Bacteria[a++];
 
  void setup()   
